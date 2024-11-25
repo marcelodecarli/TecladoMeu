@@ -1,0 +1,130 @@
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: antiquewhite;
+  color: #fff;
+}
+
+#container{
+  width: 780px;
+  border-radius: 15px;
+  padding: 40px 45px;
+  background-color: black;
+}
+
+#container header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(181, 181, 181);
+}
+
+header h2{
+  font-size: 1.6rem;
+}
+
+header .column{
+  display: flex;
+  align-items: center;
+}
+
+header .column span{
+  font-weight:500;
+  margin-right: 15px;
+  font-size: 1.1rem;
+}
+
+.volume input{
+  accent-color: #fff;
+}
+
+.kyes-check input{
+  width: 60px;
+  height: 30px;
+  appearance: none;
+  border-radius: 30px;
+  background-color: #2a2a2a;
+  cursor: pointer;
+  position: relative;
+  border: 3px solid #747bd8;
+}
+
+.kyes-check input::before{
+  content: "";
+  height: 20px;
+  width: 20px;
+  border-radius: inherit;
+  background-color: #8c8c8c;
+  position: absolute;
+  top: 50%;
+  left: 0.3rem;
+  transform: translateY(-50%);
+  transition: all 500ms;
+
+}
+
+.kyes-check input:checked{
+  background-color: #8c8c8c;
+  border: 3px solid #404bde;
+}
+
+
+.kyes-check input:checked::before{
+  left: 2.1rem;
+  background-color: #2a2a2a ;
+}
+
+.piano-keys{
+  display: flex;
+  margin-top: 40px;
+}
+
+.piano-keys .key{
+  cursor: pointer;
+  list-style: none;
+  color: #8c8c8c;
+  user-select: none;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.piano-keys .white{
+  width: 70px;
+  height: 230px;
+  border: black 1px solid;
+  border-radius: 0 0 5px 5px;
+  background: linear-gradient(#fff, #eee, #b2b2b2);
+}
+
+.piano-keys .black{
+  width: 44px;
+  height: 140px;
+  z-index: 2;
+  margin: 0 -22px 0 -22px;
+  border: black 1px solid;
+  border-radius: 0 0 5px 5px;
+  background: linear-gradient(#000, #161515);
+}
+
+.piano-keys span{
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 1.13rem;
+}
+
+.piano-keys .white.active{
+  box-shadow: inset 5px -5px 20px  rgba(0, 0, 0, 0.271)
+}
+
+
+.piano-keys .black.active{
+  box-shadow: inset 2px -2px 5px rgba(255, 255, 255, 0.297);
+}
+
+.hide span{
+  display: none;
+}
